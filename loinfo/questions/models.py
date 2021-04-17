@@ -7,6 +7,7 @@ class Question(models.Model):
     username = models.CharField(max_length=20,unique=True,null=True)
     date_created = models.DateTimeField(verbose_name='Date created',auto_now_add=True,null=True)
     date_updated = models.DateTimeField(verbose_name='Date updated',auto_now=True,null=True)
+    is_verified = models.BooleanField(default=False)
 
     def __str__(self):
         return self.username
